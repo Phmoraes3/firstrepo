@@ -58,10 +58,12 @@
           <script> 
         window.alert('Seja bem vindo à minha primeira "Task"!')
         var nome = window.prompt('Para começarmos, qual é o seu nome?')
+        // #2
         document.querySelector('h3#hello').innerHTML = `Olá, <strong>${nome}</strong> <span style='font-size:20pt;'>&#128075;</span>! Bem-vindo(a) à minha primeira Task!`
         document.querySelector('h3#hello_box').innerHTML = `<div id="hello_block" > Digite sua idade ao lado <span style='font-size:20pt;'>&#128073;</span> <input type='number' name='Digite Aqui...' id='ageNumber'> <input type="button" value="Enviar" onclick="rodar()"> </div>` 
 
-        function rodar() {
+        // #3
+        function rodar() { 
             var idade = Number(document.querySelector('input#ageNumber').value)
             var res = document.querySelector('div#hello_block')
 
