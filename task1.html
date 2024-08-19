@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-1</title>
+    <style> 
+        
+        h3#hello {
+            transition: 1.0s;
+            margin-top: 45px;
+            font: normal 20pt Arial;
+            background: rgb(246, 246, 246);
+            color: rgb(33, 33, 33);
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+            border-radius: 25px;
+            border-top: rgb(101, 101, 101) 2px solid;
+
+        }
+
+        div#hello_block {
+            transition: 1.0s;
+            margin-top: 5px;
+            font: normal 17pt Arial;
+            font-weight: 100;
+            background: rgb(246, 246, 246);
+            color: rgb(33, 33, 33);
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-radius: 25px;
+        }
+
+        input {
+            align-items: center;
+        }
+
+        div#gif {
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 25px;
+        }
+                  
+    </style>
+</head>
+<body>
+    
+    <h3 id="hello"></h3>
+    <div id="hello_block">
+        <h3 id="hello_box"></h3>
+    </div>
+          <script> 
+        window.alert('Seja bem vindo à minha primeira "Task"!')
+        var nome = window.prompt('Para começarmos, qual é o seu nome?')
+        document.querySelector('h3#hello').innerHTML = `Olá, <strong>${nome}</strong> <span style='font-size:20pt;'>&#128075;</span>! Bem-vindo(a) à minha primeira Task!`
+        document.querySelector('h3#hello_box').innerHTML = `<div id="hello_block" > Digite sua idade ao lado <span style='font-size:20pt;'>&#128073;</span> <input type='number' name='Digite Aqui...' id='ageNumber'> <input type="button" value="Enviar" onclick="rodar()"> </div>` 
+
+        function rodar() {
+            var idade = Number(document.querySelector('input#ageNumber').value)
+            var res = document.querySelector('div#hello_block')
+
+            if (idade < '18') {
+            res.innerHTML = `<strong>${nome}</strong>, você é menor de idade!`
+            gif.innerHTML = `<div id="gif"> <iframe src="https://giphy.com/embed/SggILpMXO7Xt6" width="480" height="264" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sblobbery-clbarrr-idzz-SggILpMXO7Xt6">via GIPHY</a></p> </div>`
+        }   else {
+            res.innerHTML = `<strong>${nome}</strong>, você é maior de idade!`
+            gif.innerHTML = `<div id="gif"> <iframe src="https://giphy.com/embed/8lgqAbycBjosxjfi9k" width="270" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/moodman-funny-dog-8lgqAbycBjosxjfi9k">via GIPHY</a></p> </div>`
+        }
+    }
+    </script>
+     <div id="gif"> <iframe src="https://giphy.com/embed/cYZkY9HeKgofpQnOUl" width="270" height="480" style frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/moodman-funny-dog-cYZkY9HeKgofpQnOUl"></a></p> </div>
+ 
+</body>
+</html>
+
